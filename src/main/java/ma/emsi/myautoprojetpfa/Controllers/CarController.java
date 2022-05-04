@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Car controller API
 @RestController
 @RequestMapping("/car")
 public class CarController {
@@ -24,7 +25,7 @@ public class CarController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Car>> getAllCars(Car car)
+    public ResponseEntity<List<Car>> getAllCars()
     {
         List<Car> listeallcars = carService.findAllCars();
         return new ResponseEntity<>(listeallcars, HttpStatus.OK);
