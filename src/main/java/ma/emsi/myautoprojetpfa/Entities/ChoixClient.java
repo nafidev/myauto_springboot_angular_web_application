@@ -18,6 +18,9 @@ public class ChoixClient implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long Id;
+    private String nom;
+    private String prenom;
+    private String tel;
     private String nomVoiture;
     private String fabricant;
     private Long prixInitial;

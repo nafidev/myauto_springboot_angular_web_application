@@ -16,20 +16,12 @@ public class Rendezvous {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nomClient;
-    private String dateValidation;
-    private String nomCommercial;
-    private Date dateRendezvous;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinTable(name = "rendezvous_choixclient",
-    joinColumns = {
-            @JoinColumn(name = "rendezvous_id")
-    },
-    inverseJoinColumns = {
-            @JoinColumn(name = "choixclient_id")
-    })
-    private ChoixClient choixClient;
+    private String nomclient;
+    private String telclient;
+    private String nomcommercial;
+    private Long idchoix;
+    private String telcommercial;
+    private String daterdv;
 
 
 }
